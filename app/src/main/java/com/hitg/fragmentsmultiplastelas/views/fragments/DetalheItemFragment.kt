@@ -30,4 +30,14 @@ class DetalheItemFragment : Fragment() {
         tvBody.text = item?.body
         return view
     }
+
+    companion object {
+        fun newInstance(item: Item): DetalheItemFragment {
+            val fragmentDemo = DetalheItemFragment()
+            val args = Bundle()
+            args.putParcelable("item", item)
+            fragmentDemo.arguments = args
+            return fragmentDemo
+        }
+    }
 }

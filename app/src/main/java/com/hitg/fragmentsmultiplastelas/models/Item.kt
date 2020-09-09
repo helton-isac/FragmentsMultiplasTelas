@@ -4,7 +4,10 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Item(val title: String, val body: String) : Parcelable {
+data class Item(
+    var title: String = "Não informado",
+    val body: String = "0.0"
+) : Parcelable {
     companion object {
         fun fetchAll(): List<Item> {
             return listOf(
